@@ -21,6 +21,7 @@ const handler = (req: NextRequest) =>
     req,
     router: appRouter,
     createContext: () => createContext(req),
+    allowBatching: false,
     onError:
       env.NODE_ENV === "development"
         ? ({ path, error }) => {
