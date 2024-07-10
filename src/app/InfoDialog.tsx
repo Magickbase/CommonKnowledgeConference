@@ -18,7 +18,7 @@ export const InfoDialog: FC<PropsWithChildren> = ({ children }) => {
           </p>
           <p className="md:text-lg text-base">
             CKB has always been driven forward by a grassroots movement,
-            building on proven technologies such as PoW, UTXO's and RISC-V.
+            building on proven technologies such as PoW, UTXO&apos;s and RISC-V.
           </p>
           <p className="md:text-lg text-base">
             This will be the largest community gathering yet, bringing together
@@ -26,7 +26,7 @@ export const InfoDialog: FC<PropsWithChildren> = ({ children }) => {
             building on Bitcoin and other UTXO blockchains.
           </p>
           <p className="md:text-lg text-base">
-            Don't miss this opportunity to expand your common knowledge!
+            Don&apos;t miss this opportunity to expand your common knowledge!
           </p>
 
           <div className="flex justify-center">
