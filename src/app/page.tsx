@@ -2,6 +2,8 @@ import Image from "next/image";
 import bgImg from "./bg.png";
 import { Subscribe } from "./Subscribe";
 import { InfoDialog } from "./InfoDialog";
+import { PingPoint } from "./PingPoint";
+
 
 export default function Home() {
   return (
@@ -30,13 +32,11 @@ export default function Home() {
           height={bgImg.height}
           width={bgImg.width}
           alt="background"
+          priority
         />
 
         <InfoDialog>
-          <div className="w-6 h-6 absolute top-[36%] left-[51.5%] cursor-pointer flex items-center justify-center">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-            <span className="relative inline-flex rounded-full h-4 w-4 bg-white" />
-          </div>
+          <PingPoint className="top-[36%] left-[51.5%] cursor-pointer" />
         </InfoDialog>
       </div>
 
