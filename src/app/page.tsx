@@ -5,7 +5,7 @@ import { InfoDialog } from "./InfoDialog";
 
 export default function Home() {
   return (
-    <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen overflow-hidden">
+    <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen">
       <div className="w-[350px] md:w-[750px] xl:w-[1200px] 2xl:w-[1920px] 3xl:w-[2560px] 4xl:w-[3251px] mb-auto">
         <div className="font-veneer w-full text-center leading-none text-[48px] md:text-[65px] xl:text-[104px] 2xl:text-[166px] 3xl:text-[222px] 4xl:text-[282px]">
           COMMON KNOWLEDGE CONFERENCE
