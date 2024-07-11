@@ -12,7 +12,7 @@ export const newsLetterRouter = createTRPCRouter({
   signup: publicProcedure
     .input(
       z.object({
-        email: z.string(),
+        email: z.string().email(),
       }),
     )
     .mutation(async ({ input: { email } }) => {

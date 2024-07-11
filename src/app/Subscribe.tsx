@@ -36,9 +36,12 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
   }, [email])
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    mutation.mutateAsync({ email: data.email }).then(() => {
+    mutation.mutateAsync({ email: data.email }).then((res) => {
+      if (!res.success) throw new Error(res.error?.message)
+
       setSubscribed(true)
-    }).catch(() => {
+    }).catch((err) => {
+      console.error(err)
       setError('email', { message: 'Failed to add user to newsletter' })
     })
   }
