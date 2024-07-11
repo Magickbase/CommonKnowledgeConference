@@ -64,7 +64,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
             {...register("email")}
           />
           <button
-            className="rounded-full font-bold md:text-xl text-xs md:border-2 border border-solid bg-[#E2892B] border-black md:py-3 md:px-6 px-4 py-2"
+            className="rounded-full font-bold md:text-xl text-xs md:border-2 border border-solid transition-all duration-300 bg-[#E2892B] hover:bg-[#EBAC6B] border-black md:py-3 md:px-6 px-4 py-2"
             type="submit"
           >
             Stay Updated
