@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         veneer: 'Veneer',
+        articulatCF: 'Articulat_CF',
       },
       keyframes: {
         "accordion-down": {

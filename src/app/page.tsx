@@ -5,12 +5,12 @@ import { InfoDialog } from "./InfoDialog";
 
 export default function Home() {
   return (
-    <main className="w-full pt-4 pb-4 flex flex-col items-center h-screen overflow-hidden">
-      <div className="flex flex-col justify-center items-center w-fit">
-        <div className="font-veneer md:text-[8vw] leading-none -mb-[1vw] text-center text-5xl">
+    <main className="w-full py-4 flex flex-col items-center h-screen overflow-hidden">
+      <div className="md:px-12 px-4 mb-auto">
+        <div className="font-veneer w-full text-justify md:[text-align-last:justify] [text-align-last:center] xl:text-[8vw] md:text-[7vw] text-5xl leading-none -mb-[1vw]">
           COMMON KNOWLEDGE CONFERENCE
         </div>
-        <div className="flex w-full md:px-0 px-4">
+        <div className="flex w-full  font-articulatCF">
           <div>
             <div>NOVEMBER 9</div>
             <div>2024</div>
@@ -23,36 +23,38 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative md:my-0 mt-[12vh] mb-[8vh]">
-        <Image
-          className="md:h-[50vh] md:max-w-[160vh] object-cover select-none h-[30vh] max-w-[100vh]"
-          src={bgImg.src}
-          height={bgImg.height}
-          width={bgImg.width}
-          alt="background"
-          priority
-        />
+      <div>
+        <div className="relative">
+          <Image
+            className="max-md:object-cover select-none max-md:h-[240px]"
+            src={bgImg.src}
+            height={bgImg.height}
+            width={bgImg.width}
+            alt="background"
+            priority
+          />
 
-        <InfoDialog>
-          <div
-            className={
-              "top-[36%] left-[51.5%] cursor-pointer transition-all duration-500 w-6 h-6 absolute flex items-center justify-center"
-            }
-          >
-            <span
+          <InfoDialog>
+            <div
               className={
-                "animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+                "top-[36%] left-[51.5%] cursor-pointer transition-all duration-500 w-6 h-6 absolute flex items-center justify-center"
               }
-              style={{ animationDuration: "2200ms" }}
-            />
-            <span className="relative inline-flex rounded-full h-4 w-4 bg-white" />
-          </div>
-        </InfoDialog>
+            >
+              <span
+                className={
+                  "animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+                }
+                style={{ animationDuration: "2200ms" }}
+              />
+              <span className="relative inline-flex rounded-full h-4 w-4 bg-white" />
+            </div>
+          </InfoDialog>
+        </div>
+
+        <Subscribe className="2xl:mt-12 mt-8 w-full md:px-12 px-4" />
       </div>
 
-      <Subscribe className="mt-4 w-full md:px-0 px-4" />
-
-      <div className="flex mt-auto w-full md:px-8 px-4 md:text-base text-sm">
+      <div className="flex md:px-12 px-4 mt-auto w-full md:text-base md:font-normal text-xs font-light font-articulatCF">
         <div className="mr-auto">
           PRESENTED BY{" "}
           <a

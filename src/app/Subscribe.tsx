@@ -47,7 +47,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
   }
 
   return (
-    <div className={clsx("flex justify-center", className)} {...props}>
+    <div className={clsx("flex justify-center font-articulatCF", className)} {...props}>
       <div className="flex flex-col gap-2">
         <div className="md:text-xl font-bold text-sm">
           Sign up to receive updates and attendance information.
@@ -55,7 +55,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
         <form className="flex gap-2" onSubmit={handleSubmit(onSubmit)}>
           <input
             className={clsx(
-              "flex-1 rounded-full border-2 border-solid md:py-3 md:px-6 px-4 py-2 bg-black bg-opacity-10 placeholder:text-black placeholder:opacity-50",
+              "flex-1 rounded-full md:border-2 border border-solid md:py-3 md:px-6 px-4 py-2 bg-black bg-opacity-10 md:text-xl text-xs placeholder:text-black placeholder:opacity-50 md:placeholder:text-xl",
               { ['border-[#FF3434]']: errors.email },
               { ['border-black']: !errors.email },
             )}
@@ -64,7 +64,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
             {...register("email")}
           />
           <button
-            className="rounded-full border-2 border-solid bg-[#E2892B] border-black md:py-3 md:px-6 px-4 py-2"
+            className="rounded-full font-bold md:text-xl text-xs md:border-2 border border-solid bg-[#E2892B] border-black md:py-3 md:px-6 px-4 py-2"
             type="submit"
           >
             Stay Updated
@@ -72,7 +72,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
         </form>
 
         {errors.email ? (
-          <div className="text-[#FF3434]">{errors.email.message}</div>
+          <div className="text-[#FF3434] md:text-xl text-xs">{errors.email.message}</div>
         ) : subscribed ? (
           <div>A confirmation email has been sent to your mailbox</div>
         ) : null}

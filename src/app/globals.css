@@ -7,6 +7,11 @@
     font-family: 'Veneer';
     src: url(/fonts/Veneer.ttf);
   }
+
+  @font-face {
+    font-family: 'Articulat_CF';
+    src: url(/fonts/ArticulatCF-Normal.woff2);
+  }
 }
 
 body {
