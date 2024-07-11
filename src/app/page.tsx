@@ -26,7 +26,7 @@ export default function Home() {
       <div>
         <div className="relative">
           <Image
-            className="max-md:object-cover select-none max-md:h-[240px]"
+            className="max-md:object-cover select-none max-md:h-[240px] max-h-[calc(100vh-360px)] object-contain"
             src={bgImg.src}
             height={bgImg.height}
             width={bgImg.width}
