@@ -10,12 +10,16 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      'md': '750px',
+      'xl': '1200px',
+      '2xl': '1920px',
+      '3xl': '2560px',
+      '4xl': '3840px',
+    },
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       fontFamily: {

@@ -5,12 +5,12 @@ import { InfoDialog } from "./InfoDialog";
 
 export default function Home() {
   return (
-    <main className="w-full py-4 flex flex-col items-center h-screen overflow-hidden">
-      <div className="md:px-12 px-4 mb-auto">
-        <div className="font-veneer w-full text-justify md:[text-align-last:justify] [text-align-last:center] xl:text-[8vw] md:text-[7vw] text-5xl leading-none -mb-[1vw]">
+    <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen overflow-hidden">
+      <div className="w-full 4xl:px-[400px] 3xl:px-[80px] 2xl:px-[56px] md:px-12 px-4 mb-auto">
+        <div className="font-veneer w-full text-justify md:[text-align-last:justify] [text-align-last:center] leading-none text-[48px] md:text-[65px] xl:text-[105px] 2xl:text-[170px] 3xl:text-[226px] 4xl:text-[265px]">
           COMMON KNOWLEDGE CONFERENCE
         </div>
-        <div className="flex w-full  font-articulatCF">
+        <div className="flex w-full font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none">
           <div>
             <div>NOVEMBER 9</div>
             <div>2024</div>
@@ -26,7 +26,7 @@ export default function Home() {
       <div>
         <div className="relative">
           <Image
-            className="max-md:object-cover select-none max-md:h-[240px] max-h-[calc(100vh-360px)] object-contain"
+            className="max-md:object-cover select-none h-[240px] w-[750px] xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
             src={bgImg.src}
             height={bgImg.height}
             width={bgImg.width}
@@ -51,10 +51,10 @@ export default function Home() {
           </InfoDialog>
         </div>
 
-        <Subscribe className="2xl:mt-12 mt-8 w-full md:px-12 px-4" />
+        <Subscribe className="4xl:mt-20 3xl:mt-12 mt-8 w-full md:px-12 px-4" />
       </div>
 
-      <div className="flex md:px-12 px-4 mt-auto w-full md:text-base md:font-normal text-xs font-light font-articulatCF">
+      <div className="flex 4xl:px-[400px] 3xl:px-[80px] 2xl:px-[56px] md:px-12 px-4 mt-auto w-full 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF">
         <div className="mr-auto">
           PRESENTED BY{" "}
           <a
