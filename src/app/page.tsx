@@ -6,8 +6,8 @@ import { InfoDialog } from "./InfoDialog";
 export default function Home() {
   return (
     <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen overflow-hidden">
-      <div className="w-full 4xl:px-[400px] 3xl:px-[80px] 2xl:px-[56px] md:px-12 px-4 mb-auto">
-        <div className="font-veneer w-full text-justify md:[text-align-last:justify] [text-align-last:center] leading-none text-[48px] md:text-[65px] xl:text-[105px] 2xl:text-[170px] 3xl:text-[226px] 4xl:text-[265px]">
+      <div className="w-[350px] md:w-[750px] xl:w-[1200px] 2xl:w-[1920px] 3xl:w-[2560px] 4xl:w-[3251px] mb-auto">
+        <div className="font-veneer w-full text-center leading-none text-[48px] md:text-[65px] xl:text-[104px] 2xl:text-[166px] 3xl:text-[222px] 4xl:text-[282px]">
           COMMON KNOWLEDGE CONFERENCE
         </div>
         <div className="flex w-full font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none">
@@ -54,7 +54,7 @@ export default function Home() {
         <Subscribe className="4xl:mt-20 3xl:mt-12 mt-8 w-full md:px-12 px-4" />
       </div>
 
-      <div className="flex 4xl:px-[400px] 3xl:px-[80px] 2xl:px-[56px] md:px-12 px-4 mt-auto w-full 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF">
+      <div className="flex w-[350px] md:w-[750px] xl:w-[1200px] 2xl:w-[1920px] 3xl:w-[2560px] 4xl:w-[3251px] mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF">
         <div className="mr-auto">
           PRESENTED BY{" "}
           <a
