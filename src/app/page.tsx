@@ -43,7 +43,13 @@ export default function Home() {
       <div className="py-8">
         <div className="relative">
           <Image
-            className="max-md:hidden object-contain select-none xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
+            className={clsx(
+              "max-md:hidden object-contain select-none",
+              "xl:h-[312px] xl:w-[1200px]",
+              "2xl:h-[500px] 2xl:w-[1920px]",
+              "3xl:h-[664px] 3xl:w-[2560px]",
+              "4xl:h-[1000px] 4xl:w-[3840px]"
+            )}
             src={bgImg.src}
             height={bgImg.height}
             width={bgImg.width}
@@ -51,7 +57,7 @@ export default function Home() {
             priority
           />
           <Image
-            className="md:hidden object-cover select-none h-[240px] w-[750px]"
+            className="md:hidden object-cover select-none h-[195px] w-[750px]"
             src={bgMobileImg.src}
             height={bgMobileImg.height}
             width={bgMobileImg.width}
@@ -62,7 +68,7 @@ export default function Home() {
           <InfoDialog>
             <div
               className={
-                "top-[36%] left-[51.5%] cursor-pointer transition-all duration-500 w-6 h-6 absolute flex items-center justify-center"
+                "top-[32%] left-[51%] cursor-pointer transition-all duration-500 w-6 h-6 absolute flex items-center justify-center"
               }
             >
               <span
