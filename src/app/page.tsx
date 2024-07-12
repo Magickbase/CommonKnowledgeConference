@@ -7,7 +7,7 @@ import clsx from "clsx";
 
 export default function Home() {
   return (
-    <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen">
+    <main className="w-full 3xl:py-12 md:py-4 py-12 flex flex-col items-center h-screen">
       <div
         className={clsx(
           "mb-auto",
