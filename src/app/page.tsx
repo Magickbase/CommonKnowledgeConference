@@ -27,7 +27,7 @@ export default function Home() {
         >
           COMMON KNOWLEDGE CONFERENCE
         </div>
-        <div className="flex w-full font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none 2xl:leading-none 4xl:leading-none">
+        <div className="flex w-full font-light font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none 2xl:leading-none 4xl:leading-none">
           <div>
             <div>NOVEMBER 9</div>
             <div>2024</div>
@@ -82,7 +82,7 @@ export default function Home() {
       <div
         className={clsx(
           "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]",
-          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF"
+          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF font-light"
         )}
       >
         <div className="mr-auto">
