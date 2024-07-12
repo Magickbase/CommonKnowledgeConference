@@ -82,7 +82,7 @@ export default function Home() {
       <div
         className={clsx(
           "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]",
-          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF font-light"
+          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF"
         )}
       >
         <div className="mr-auto">

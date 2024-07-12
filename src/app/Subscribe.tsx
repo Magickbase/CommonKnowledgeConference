@@ -85,7 +85,7 @@ export const Subscribe: FC<ComponentProps<"div">> = ({
             ? errors.email.message
             : subscribed
             ? "A confirmation email has been sent to your mailbox"
-            : <span>&#20;</span>}
+            : <span>&nbsp;</span>}
         </div>
       </div>
     </div>
