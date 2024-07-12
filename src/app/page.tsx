@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bgImg from "./bg.png";
+import bgMobileImg from "./bg-mobile.png";
 import { Subscribe } from "./Subscribe";
 import { InfoDialog } from "./InfoDialog";
 import clsx from "clsx";
@@ -15,13 +16,13 @@ export default function Home() {
       >
         <div
           className={clsx(
-            "font-veneer w-full text-center -tracking-[0.03em]",
-            "leading-[48px] text-[52px]",
-            "md:text-[64px] md:leading-[63.7px]",
-            "xl:text-[104px] xl:leading-[102.9px]",
-            "2xl:text-[168px] 2xl:leading-[166.6px]",
-            "3xl:text-[224px] 3xl:leading-[221.48px]",
-            "4xl:text-[282px] 4xl:leading-[276.36px]"
+            "font-veneer w-full text-center -tracking-[0.03em] relative",
+            "leading-[48px] text-[52px] ",
+            "md:text-[64px] md:leading-[63.7px] md:-bottom-[.1em]",
+            "xl:text-[104px] xl:leading-[102.9px] xl:-bottom-[.14em]",
+            "2xl:text-[168px] 2xl:leading-[166.6px] 2xl:-bottom-[.15em]",
+            "3xl:text-[224px] 3xl:leading-[221.48px] 3xl:-bottom-[.17em]",
+            "4xl:text-[282px] 4xl:leading-[276.36px] 4xl:-bottom-[.12em]"
           )}
         >
           COMMON KNOWLEDGE CONFERENCE
@@ -42,10 +43,18 @@ export default function Home() {
       <div className="py-8">
         <div className="relative">
           <Image
-            className="max-md:object-cover select-none h-[240px] w-[750px] xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
+            className="max-md:hidden select-none xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
             src={bgImg.src}
             height={bgImg.height}
             width={bgImg.width}
+            alt="background"
+            priority
+          />
+          <Image
+            className="md:hidden object-cover select-none h-[240px] w-[750px]"
+            src={bgMobileImg.src}
+            height={bgMobileImg.height}
+            width={bgMobileImg.width}
             alt="background"
             priority
           />
