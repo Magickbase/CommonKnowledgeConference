@@ -43,7 +43,7 @@ export default function Home() {
       <div className="py-8">
         <div className="relative">
           <Image
-            className="max-md:hidden select-none xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
+            className="max-md:hidden object-contain select-none xl:h-[384px] xl:w-[1200px] 2xl:h-[615px] 2xl:w-[1920px] 3xl:h-[744px] 3xl:w-[2560px] 4xl:h-[1115px] 4xl:w-[3840px]"
             src={bgImg.src}
             height={bgImg.height}
             width={bgImg.width}
