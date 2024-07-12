@@ -7,7 +7,12 @@ import clsx from "clsx";
 export default function Home() {
   return (
     <main className="w-full 3xl:py-12 py-4 flex flex-col items-center h-screen">
-      <div className="w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px] mb-auto">
+      <div
+        className={clsx(
+          "mb-auto",
+          "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]"
+        )}
+      >
         <div
           className={clsx(
             "font-veneer w-full text-center -tracking-[0.03em]",
@@ -65,7 +70,12 @@ export default function Home() {
         <Subscribe className="4xl:mt-20 3xl:mt-12 mt-8 w-full md:px-12 px-4" />
       </div>
 
-      <div className="flex w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3251px] mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF">
+      <div
+        className={clsx(
+          "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]",
+          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF"
+        )}
+      >
         <div className="mr-auto">
           PRESENTED BY{" "}
           <a
