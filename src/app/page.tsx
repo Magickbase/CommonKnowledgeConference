@@ -4,6 +4,9 @@ import bgMobileImg from "./bg-mobile.png";
 import { Subscribe } from "./Subscribe";
 import { InfoDialog } from "./InfoDialog";
 import clsx from "clsx";
+import Link from "next/link";
+
+const LUMA_URL = "https://lu.ma/embed/event/evt-9nI8QgjrKVCXAzm/simple"
 
 export default function Home() {
   return (
@@ -26,6 +29,31 @@ export default function Home() {
           )}
         >
           COMMON KNOWLEDGE CONFERENCE
+          <Link href={LUMA_URL}
+            className="
+            absolute 
+            top-36 ticket-sm:top-6 md:top-24 ticket-md:-top-1 xl:top-32 ticket-xl:top-3 2xl:top-[200px] ticket-2xl:top-8 3xl:top-60 ticket-3xl:top-12 4xl:top-12 ticket-4xl:top-16
+            right-0 ticket-sm:-right-20 md:right-0 ticket-md:-right-28 xl:right-0 ticket-xl:-right-28 2xl:right-0 ticket-2xl:-right-28 3xl:right-0 ticket-3xl:-right-28
+            flex justify-center items-center
+            w-min h-min
+            tracking-normal
+            rounded-full
+font-articulatCF
+            font-bold  
+            text-xs md:text-xl
+            border md:border-2
+            border-solid
+            border-black
+            transition-all
+            duration-300
+            bg-[#E2892B]
+            hover:bg-[#EBAC6B] 
+            px-4 md:px-6 
+            py-2 md:py-3
+            "
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Ticket">Ticket</Link>
         </div>
         <div className="flex w-full font-light font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none 2xl:leading-none 4xl:leading-none">
           <div>
@@ -38,6 +66,7 @@ export default function Home() {
             <div>THAILAND</div>
           </div>
         </div>
+
       </div>
 
       <div className="py-8">

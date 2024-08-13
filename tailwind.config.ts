@@ -16,6 +16,12 @@ const config = {
       '2xl': '1920px',
       '3xl': '2560px',
       '4xl': '3840px',
+      'ticket-sm': '480px',
+      'ticket-md': '880px',
+      'ticket-xl': '1300px',
+      'ticket-2xl': '2020px',
+      'ticket-3xl': '2660px',
+      'ticket-4xl': '3940px',
     },
     container: {
       center: true,
