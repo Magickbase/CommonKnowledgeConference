@@ -13,12 +13,13 @@ export const newsLetterRouter = createTRPCRouter({
     .input(
       z.object({
         email: z.string().email(),
+        name: z.string().optional(),
       }),
     )
-    .mutation(async ({ input: { email } }) => {
+    .mutation(async ({ input: { email, name } }) => {
       const data = {
         list_ids: [SEND_GRID_LIST_ID],
-        contacts: [{ email }],
+        contacts: [{ email, name }],
       }
 
       const res = await fetch(SEND_GRID_API_ENDPOINT, {
