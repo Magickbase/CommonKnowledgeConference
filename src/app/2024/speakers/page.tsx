@@ -19,21 +19,19 @@ export default function SpeakersPage() {
       />
 
       <div className="flex flex-col xl:grid grid-cols-4 gap-[60px] xl:gap-[120px] w-[1000px] mb-12">
-        {[...SPEAKERS, ...SPEAKERS, ...SPEAKERS].map(
-          (member, index) => (
-            <Member
-              key={index}
-              avatar={member.avatar}
-              name={member.name}
-              description={member.title}
-              xLink={member.xLink}
-            />
-          )
-        )}
+        {[...SPEAKERS, ...SPEAKERS, ...SPEAKERS].map((member, index) => (
+          <Member
+            key={index}
+            avatar={member.avatar}
+            name={member.name}
+            description={member.title}
+            xLink={member.xLink}
+          />
+        ))}
       </div>
 
       <div className="flex flex-col items-center gap-16">
-        <div className="font-articulatCF font-extrabold italic text-5xl text-[#FD480D]">
+        <div className="font-chakraPetch font-bold text-center text-5xl text-[#FD480D]">
           SPEAKER APPLICATION
         </div>
 
@@ -58,9 +56,11 @@ export default function SpeakersPage() {
               fruition.
             </div>
 
-            <Button size="sm" className="mt-8">
-              APPLY NOW
-            </Button>
+            <Link href="https://forms.gle/Frsphz2tsHNQUyGh7" target="_blank">
+              <Button size="sm" className="mt-8">
+                APPLY NOW
+              </Button>
+            </Link>
 
             <Image
               className="absolute xl:hidden z-[2] max-w-none -bottom-[160px] -right-[100px]"

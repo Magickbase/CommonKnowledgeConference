@@ -2,7 +2,9 @@ import { ComponentProps } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-import logoBgImg from "./logo-large.png";
+import FooterLogo from "./footer.svg";
+import FooterMobileLogo from "./footer-mobile.svg";
+
 
 const externalLinks = [
   {
@@ -37,7 +39,7 @@ const externalLinks = [
 
 export const Footer = ({ className, ...props }: ComponentProps<"div">) => (
   <div
-    className="flex flex-col items-center border-t border-[#00000026] py-16 gap-16 md:gap-0"
+    className="flex flex-col items-center border-t border-[#00000026] py-16 gap-20"
     {...props}
   >
     <ul className="flex flex-col md:flex-row gap-16">
@@ -52,14 +54,11 @@ export const Footer = ({ className, ...props }: ComponentProps<"div">) => (
       </Link>
     </ul>
 
-    <Image
-      className="max-w-[100vw]"
-      src={logoBgImg.src}
-      height={logoBgImg.height}
-      width={logoBgImg.width}
-      alt="ckcon"
-      priority
+    <FooterLogo
+      className="max-w-[100vw] hidden xl:block"
     />
+
+    <FooterMobileLogo className="max-w-[100vw] xl:hidden"/>
 
     <ul className="flex flex-col md:flex-row gap-8 md:gap-16">
       {externalLinks.map(({ name, href }) => (

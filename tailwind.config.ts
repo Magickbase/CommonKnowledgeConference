@@ -31,6 +31,7 @@ const config = {
       fontFamily: {
         veneer: 'Veneer',
         articulatCF: 'Articulat_CF',
+        chakraPetch: 'ChakraPetch',
       },
       keyframes: {
         "accordion-down": {

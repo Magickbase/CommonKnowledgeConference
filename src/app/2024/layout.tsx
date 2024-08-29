@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoImg from "./logo.png";
+import Logo from "./logo.svg";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -35,14 +35,7 @@ export default function Layout({
       <div className="flex w-full items-center py-3 px-3 xl:py-6 xl:px-8">
         <div className="flex gap-4 items-center">
           <Link href="/2024/">
-            <Image
-              className="max-w-none h-9 w-[90px] xl:h-[60px] xl:w-[154px]"
-              src={logoImg.src}
-              height={logoImg.height}
-              width={logoImg.width}
-              alt="logo"
-              priority
-            />
+            <Logo className="max-w-none h-9 w-[90px] xl:h-[60px] xl:w-[154px]" />
           </Link>
           <div className="font-medium hidden xl:block">
             <div>Chiang Mai, Thailand</div>
@@ -97,7 +90,7 @@ export default function Layout({
                 href="https://lu.ma/event/evt-9nI8QgjrKVCXAzm "
                 target="_blank"
               >
-                <Button size='sm'>TICKETS</Button>
+                <Button size="sm">TICKETS</Button>
               </Link>
             </div>
           </DrawerContent>

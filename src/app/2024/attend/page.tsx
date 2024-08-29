@@ -28,7 +28,7 @@ const AttendCard = ({
       )}
       {...props}
     >
-      <div className="font-articulatCF font-extrabold italic text-2xl text-[#FD480D] uppercase">
+      <div className="font-chakraPetch font-bold text-2xl text-[#FD480D] uppercase">
         {title}
       </div>
       <ViewlineIcon className="text-[#FD480D] w-full" />

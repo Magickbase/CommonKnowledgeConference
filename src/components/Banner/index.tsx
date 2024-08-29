@@ -12,7 +12,7 @@ export const Banner = ({ title, subtitle, className, ...props }: ComponentProps<
     style={{ background: `url(${bannerImg.src}) center/cover` }}
     {...props}
   >
-    <div className="mt-auto uppercase font-articulatCF font-extrabold italic text-4xl max-w-[300px] md:max-w-[630px] md:text-5xl text-[#FD480D] text-center">
+    <div className="mt-auto uppercase font-chakraPetch font-bold italic text-4xl max-w-[300px] md:max-w-[630px] md:text-5xl text-[#FD480D] text-center">
       {title}
     </div>
     <div className="font-articulatCF font-semibold text-white text-xl max-w-[300px] md:max-w-[630px] text-center">

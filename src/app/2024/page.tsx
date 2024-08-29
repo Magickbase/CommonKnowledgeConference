@@ -8,30 +8,27 @@ import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Subscribe } from "@/components/Subscribe";
 import { SPEAKERS } from "./constants";
-import sayhiImg from "./sayhi.png";
-import logoBgImg from "./logo-large.png";
+import Logo from "./logo.svg";
 import ckconBgImg from "./ckcon-bg.png";
+import walkingApesImg from "./walking-apes2.png";
+import carImg from "./car.png";
 import "./message.css";
 
 const Hero = ({ className, ...props }: ComponentProps<"div">) => {
   return (
-    <div className={clsx("w-[330px] xl:w-[1000px] text-center", className)} {...props}>
-      <div className="flex font-articulatCF font-semibold text-sm xl:text-xl uppercase">
+    <div
+      className={clsx("w-[330px] xl:w-[1000px] text-center", className)}
+      {...props}
+    >
+      <div className="flex font-articulatCF font-semibold text-sm xl:text-xl uppercase mb-10">
         <div>Chiang Mai, Thailand</div>
         <div className="ml-auto">November 9, 2024</div>
       </div>
-      <div className="relative flex flex-col items-center justify-center mb-[130px] xl:mb-[280px] ">
-        <Image
-          className="w-full"
-          src={logoBgImg.src}
-          height={logoBgImg.height}
-          width={logoBgImg.width}
-          alt="ckcon"
-          priority
-        />
+      <div className="relative flex flex-col items-center justify-center mb-[180px] xl:mb-[360px] ">
+        <Logo className="w-full" />
 
         <Image
-          className="absolute -left-[40px] xl:-left-[140px] -bottom-[130px] xl:-bottom-[260px] max-w-none h-[184px] w-[525px] xl:h-[372px] xl:w-[1280px] object-contain"
+          className="absolute -left-[40px] xl:-left-[140px] -bottom-[180px] xl:-bottom-[340px] max-w-none h-[184px] w-[525px] xl:h-[372px] xl:w-[1280px] object-contain"
           src={ckconBgImg.src}
           height={ckconBgImg.height}
           width={ckconBgImg.width}
@@ -39,7 +36,7 @@ const Hero = ({ className, ...props }: ComponentProps<"div">) => {
           priority
         />
       </div>
-      <div className="font-extrabold italic text-4xl xl:text-5xl font-articulatCF uppercase mb-4">
+      <div className="font-chakraPetch font-bold text-4xl xl:text-5xl uppercase mb-4">
         Common Knowledge Conference
       </div>
       <div className="font-articulatCF font-semibold text-xl xl:text-2xl text-[#FD480D] mb-4">
@@ -56,12 +53,16 @@ const Hero = ({ className, ...props }: ComponentProps<"div">) => {
 
 const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
   return (
-    <div className={clsx(className, "pb-32 flex flex-col items-center")} {...props}>
-      <div className="font-articulatCF font-extrabold italic text-5xl xl:text-6xl text-[#FD480D] mb-12 text-center">
+    <div
+      className={clsx(className, "pb-32 flex flex-col items-center w-[320px] xl:w-[1060px] gap-20")}
+      {...props}
+    >
+      <div className="font-chakraPetch font-bold text-5xl xl:text-6xl text-[#FD480D] text-center">
         What is CKCON?
       </div>
-      <div className="border-2 border-[#FD480D] shadow-[8px_2px_0_#FD480D] w-[320px] xl:w-[1000px] rounded-[30px] xl:rounded-[50px] py-8 xl:py-16 px-7 xl:px-20 xl:pr-[360px] relative mb-[500px] xl:mb-32">
-        <div className="flex flex-col gap-5 xl:gap-8 pb-[80px] xl:pb-0">
+
+      <div className="flex flex-col xl:flex-row gap-[50px] items-center">
+        <div className="flex-1 flex flex-col gap-[26px]">
           <div className="font-articulatCF font-bold italic text-lg xl:text-2xl text-[#FD480D]">
             We are pleased to bring you CKCon—the Common Knowledge Conference.
           </div>
@@ -86,33 +87,63 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
             the account model, we stuck with Proof-of-Work and UTXOs. Instead of
             the EVM, we built around a VM we believed in, one powered by RISC-V.
           </p>
-
-          <p className="text-sm xl:text-base">
-            None of this would&apos;ve been possible without you. This community
-            has endured through thick and thin. This November, we&apos;re
-            celebrating the ecosystem&apos;s rapid expansion with you: the
-            builders, visionaries, and everyone who dared to be different.
-          </p>
         </div>
 
-        <div className="absolute xl:-right-[40px] -bottom-[420px] xl:-bottom-[80px] flex flex-col items-center">
-          <div className="speech-bubble pbottom aright text-white w-[271px] xl:w-80 uppercase">
-            Please join us in Chiang Mai on November 9th, for the greatest
-            gathering of our community yet!
+        <Image
+          src={carImg.src}
+          height={carImg.height}
+          width={carImg.width}
+          alt="car"
+          priority
+        />
+      </div>
+
+      <div className="flex gap-[50px] items-center">
+        <div className="hidden flex-1 xl:flex flex-col items-center">
+          <div className="grid grid-cols-2 gap-[52px] mb-12">
+            {SPEAKERS.map((member) => (
+              <Member
+                key={member.name}
+                avatar={member.avatar}
+                name={member.name}
+              />
+            ))}
           </div>
-          <Image
-            className="w-[276px] h-[307px] xl:w-[343px] xl:h-[382px]"
-            src={sayhiImg.src}
-            height={sayhiImg.height}
-            width={sayhiImg.width}
-            alt="sayhi"
-            priority
-          />
+
+          <Link href="/2024/speakers">
+            <Button size="sm">See all Speakers</Button>
+          </Link>
+        </div>
+
+        <div className="flex-1">
+          <p className="text-sm xl:text-base mb-[40px]">
+            The same theses that once alienated us from others have been
+            validated. When others tried to scale on Layer 1, we embraced a
+            layered approach. While others moved to Proof of Stake and pursued
+            the account model, we stuck with Proof-of-Work and UTXOs. Instead of
+            the EVM, we built around a VM we believed in, one powered by RISC-V.
+          </p>
+
+          <div className="flex flex-col items-center">
+
+            <div className="speech-bubble pbottom aright text-white w-120 uppercase">
+              Please join us in Chiang Mai on November 9th, for the greatest
+              gathering of our community yet!
+            </div>
+      
+            <Image
+              src={walkingApesImg.src}
+              height={walkingApesImg.height}
+              width={walkingApesImg.width}
+              alt="sayhi"
+              priority
+            />
+          </div>
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center">
-        <div className="flex flex-col xl:grid grid-cols-4 gap-[30px] xl:gap-[60px] mb-12">
+
+      <div className="flex flex-col gap-[52px] xl:hidden">
           {SPEAKERS.map((member) => (
             <Member
               key={member.name}
@@ -120,11 +151,11 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
               name={member.name}
             />
           ))}
+
+          <Link href="/2024/speakers">
+            <Button size="sm">See all Speakers</Button>
+          </Link>
         </div>
-        <Link href="/2024/speakers">
-          <Button size="sm">See all Speakers</Button>
-        </Link>
-      </div>
     </div>
   );
 };

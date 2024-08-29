@@ -4,6 +4,38 @@
 
 @layer base {
   @font-face {
+    font-family: 'ChakraPetch';
+    font-weight: bold;
+    font-style: italic;
+    src: url(/fonts/ChakraPetch-BoldItalic.ttf);
+  }
+  @font-face {
+    font-family: 'ChakraPetch';
+    font-weight: bold;
+    src: url(/fonts/ChakraPetch-Bold.ttf);
+  }
+  @font-face {
+    font-family: 'ChakraPetch';
+    font-style: italic;
+    src: url(/fonts/ChakraPetch-Italic.ttf);
+  }
+  @font-face {
+    font-family: 'ChakraPetch';
+    font-weight: 400;
+    src: url(/fonts/ChakraPetch-Light.ttf);
+  }
+  @font-face {
+    font-family: 'ChakraPetch';
+    font-weight: 400;
+    font-style: italic;
+    src: url(/fonts/ChakraPetch-LightItalic.ttf);
+  }
+  @font-face {
+    font-family: 'ChakraPetch';
+    src: url(/fonts/ChakraPetch-Regular.ttf);
+  }
+
+  @font-face {
     font-family: 'Veneer';
     src: url(/fonts/Veneer-Two.ttf);
   }

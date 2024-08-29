@@ -3,7 +3,7 @@
 .speech-bubble {
   --bbColor: #FD480D;
   --bbArrowSize: 32px;
-  --bbBorderRadius: 32px;
+  --bbBorderRadius: 12px;
   --bbPadding: 24px;
   background: var(--bbColor);
   border-radius: var(--bbBorderRadius);
