@@ -7,12 +7,14 @@ import { Button } from "@/components/ui/button";
 import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Subscribe } from "@/components/Subscribe";
-import { SPEAKERS } from "./constants";
 import Logo from "./logo.svg";
 import ckconBgImg from "./ckcon-bg.png";
 import walkingApesImg from "./walking-apes2.png";
 import carImg from "./car.png";
 import "./message.css";
+import SPEAKER_LIST from "./speakers/list";
+
+const SPEAKERS = [...SPEAKER_LIST.entries()].slice(0, 4)
 
 const Hero = ({ className, ...props }: ComponentProps<"div">) => {
   return (
@@ -101,12 +103,8 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
       <div className="flex gap-[50px] items-center">
         <div className="hidden flex-1 xl:flex flex-col items-center">
           <div className="grid grid-cols-2 gap-[52px] mb-12">
-            {SPEAKERS.map((member) => (
-              <Member
-                key={member.name}
-                avatar={member.avatar}
-                name={member.name}
-              />
+            {SPEAKERS.map(([name, profile]) => (
+              <Member key={name} name={name} profile={profile} isSimple />
             ))}
           </div>
 
@@ -130,7 +128,7 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
               Please join us in Chiang Mai on November 9th, for the greatest
               gathering of our community yet!
             </div>
-      
+
             <Image
               src={walkingApesImg.src}
               height={walkingApesImg.height}
@@ -144,18 +142,14 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
 
 
       <div className="flex flex-col gap-[52px] xl:hidden">
-          {SPEAKERS.map((member) => (
-            <Member
-              key={member.name}
-              avatar={member.avatar}
-              name={member.name}
-            />
-          ))}
+        {SPEAKERS.map(([name, profile]) => (
+          <Member key={name} name={name} profile={profile} isSimple />
+        ))}
 
-          <Link href="/2024/speakers">
-            <Button size="sm">See all Speakers</Button>
-          </Link>
-        </div>
+        <Link href="/2024/speakers">
+          <Button size="sm">See all Speakers</Button>
+        </Link>
+      </div>
     </div>
   );
 };

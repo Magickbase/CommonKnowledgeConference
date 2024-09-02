@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Member } from "@/components/Member";
 import { Button } from "@/components/ui/button";
-import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";
+import { WalkingApesCard, ShibaCard } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Banner } from "@/components/Banner";
 import { Subscribe } from "@/components/Subscribe";
-import { SPEAKERS } from "../constants";
 import interviewApeImg from "./interview-ape.png";
 import ViewlineIcon from "./viewline.svg";
+import SPEAKER_LIST from './list'
 
 export default function SpeakersPage() {
   return (
@@ -19,15 +19,7 @@ export default function SpeakersPage() {
       />
 
       <div className="flex flex-col xl:grid grid-cols-4 gap-[60px] xl:gap-[120px] w-[1000px] mb-12">
-        {[...SPEAKERS, ...SPEAKERS, ...SPEAKERS].map((member, index) => (
-          <Member
-            key={index}
-            avatar={member.avatar}
-            name={member.name}
-            description={member.title}
-            xLink={member.xLink}
-          />
-        ))}
+        {[...SPEAKER_LIST.entries()].map(([name, profile]) => <Member key={name} name={name} profile={profile} />)}
       </div>
 
       <div className="flex flex-col items-center gap-16">

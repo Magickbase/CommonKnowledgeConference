@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Member } from "@/components/Member";
 import { Button } from "@/components/ui/button";
 import { MapPin } from "lucide-react";
 import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";

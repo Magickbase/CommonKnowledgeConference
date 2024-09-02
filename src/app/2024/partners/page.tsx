@@ -1,14 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Member } from "@/components/Member";
-import { Button } from "@/components/ui/button";
 import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Banner } from "@/components/Banner";
 import { Subscribe } from "@/components/Subscribe";
-import { SPEAKERS } from "../constants";
-import interviewApeImg from "./interview-ape.png";
-import ViewlineIcon from "./viewline.svg";
 
 import ckbEcoFundLogo from "./logo/ckb-eco-fund.png";
 import cryptapeLogo from "./logo/cryptape.png";
