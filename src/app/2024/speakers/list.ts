@@ -67,6 +67,11 @@ const SPEAKER_LIST = new Map<string, Profile>([
     title: 'Cellula',
 
   }],
+  ['CHEN YU', {
+    avatar: '/img/speakers/chen_yu.png',
+    title: 'Founder @ MagiCKBase',
+    x: 'https://x.com/CHEN_YU_bio'
+  }]
 ])
 
 export default SPEAKER_LIST
