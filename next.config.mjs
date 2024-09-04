@@ -28,6 +28,13 @@ const nextConfig = {
 
     return config;
   },
+  async redirects() {
+    return [{
+      source: '/2024',
+      destination: '/',
+      permanent: true
+    }]
+  }
 };
 
 export default nextConfig;

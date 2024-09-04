@@ -34,7 +34,7 @@ export default function Layout({
     <div className="overflow-x-hidden">
       <div className="flex w-full items-center py-3 px-3 xl:py-6 xl:px-8">
         <div className="flex gap-4 items-center">
-          <Link href="/2024/">
+          <Link href="/">
             <Logo className="max-w-none h-9 w-[90px] xl:h-[60px] xl:w-[154px]" />
           </Link>
           <div className="font-medium hidden xl:block">

@@ -1,155 +1,175 @@
-import Image from "next/image";
-import bgImg from "./bg.png";
-import bgMobileImg from "./bg-mobile.png";
-import { Subscribe } from "./Subscribe";
-import { InfoDialog } from "./InfoDialog";
+import { ComponentProps } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
+import { Member } from "@/components/Member";
+import { Button } from "@/components/ui/button";
+import { ApeCard, WalkingApesCard, ShibaCard } from "@/components/Card";
+import { Footer } from "@/components/Footer";
+import { Subscribe } from "@/components/Subscribe";
+import Logo from "./2024/logo.svg";
+import ckconBgImg from "./2024/ckcon-bg.png";
+import walkingApesImg from "./2024/walking-apes2.png";
+import carImg from "./2024/car.png";
+import SPEAKER_LIST from "./2024/speakers/list";
+import "./message.css";
 
-const LUMA_URL = "https://lu.ma/embed/event/evt-9nI8QgjrKVCXAzm/simple"
+const SPEAKERS = [...SPEAKER_LIST.entries()].slice(0, 4)
 
-export default function Home() {
+const Hero = ({ className, ...props }: ComponentProps<"div">) => {
   return (
-    <main className="w-full 3xl:py-12 md:py-4 py-12 flex flex-col items-center h-screen">
-      <div
-        className={clsx(
-          "mb-auto",
-          "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]"
-        )}
-      >
-        <div
-          className={clsx(
-            "font-veneer w-full text-center -tracking-[0.03em] relative",
-            "leading-[48px] text-[52px] ",
-            "md:text-[64px] md:leading-[63.7px] md:-bottom-[.1em]",
-            "xl:text-[104px] xl:leading-[102.9px] xl:-bottom-[.14em]",
-            "2xl:text-[168px] 2xl:leading-[166.6px] 2xl:-bottom-[.15em]",
-            "3xl:text-[224px] 3xl:leading-[221.48px] 3xl:-bottom-[.17em]",
-            "4xl:text-[282px] 4xl:leading-[276.36px] 4xl:-bottom-[.12em]"
-          )}
-        >
-          COMMON KNOWLEDGE CONFERENCE
-          <Link href={LUMA_URL}
-            className="
-            absolute 
-            top-36 ticket-sm:top-6 md:top-24 ticket-md:-top-1 xl:top-32 ticket-xl:top-3 2xl:top-[200px] ticket-2xl:top-8 3xl:top-60 ticket-3xl:top-12 4xl:top-12 ticket-4xl:top-16
-            right-0 ticket-sm:-right-20 md:right-0 ticket-md:-right-28 xl:right-0 ticket-xl:-right-28 2xl:right-0 ticket-2xl:-right-28 3xl:right-0 ticket-3xl:-right-28
-            flex justify-center items-center
-            w-min h-min
-            tracking-normal
-            rounded-full
-font-articulatCF
-            font-bold  
-            text-xs md:text-xl
-            border md:border-2
-            border-solid
-            border-black
-            transition-all
-            duration-300
-            bg-[#E2892B]
-            hover:bg-[#EBAC6B] 
-            px-4 md:px-6 
-            py-2 md:py-3
-            "
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ticket">Ticket</Link>
-        </div>
-        <div className="flex w-full font-light font-articulatCF 4xl:text-5xl 2xl:text-2xl leading-none 2xl:leading-none 4xl:leading-none">
-          <div>
-            <div>NOVEMBER 9</div>
-            <div>2024</div>
-          </div>
+    <div
+      className={clsx("w-[330px] xl:w-[1000px] text-center", className)}
+      {...props}
+    >
+      <div className="flex font-articulatCF font-semibold text-sm xl:text-xl uppercase mb-10">
+        <div>Chiang Mai, Thailand</div>
+        <div className="ml-auto">November 9, 2024</div>
+      </div>
+      <div className="relative flex flex-col items-center justify-center mb-[180px] xl:mb-[360px] ">
+        <Logo className="w-full" />
 
-          <div className="ml-auto">
-            <div>CHIANG MAI</div>
-            <div>THAILAND</div>
-          </div>
-        </div>
+        <Image
+          className="absolute -left-[40px] xl:-left-[140px] -bottom-[180px] xl:-bottom-[340px] max-w-none h-[184px] w-[525px] xl:h-[372px] xl:w-[1280px] object-contain"
+          src={ckconBgImg.src}
+          height={ckconBgImg.height}
+          width={ckconBgImg.width}
+          alt="background"
+          priority
+        />
+      </div>
+      <div className="font-chakraPetch font-bold text-4xl xl:text-5xl uppercase mb-4">
+        Common Knowledge Conference
+      </div>
+      <div className="font-articulatCF font-semibold text-xl xl:text-2xl text-[#FD480D] mb-4">
+        Innovation Begins with Common Knowledge
+      </div>
+      <div className="font-articulatCF font-semibold text-base xl:text-xl">
+        “CKCon is more than just a gathering; it&apos;s a movement that
+        champions innovation and explores uncharted territories in blockchain
+        without compromising the cypherpunk ideals.”
+      </div>
+    </div>
+  );
+};
 
+const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
+  return (
+    <div
+      className={clsx(className, "pb-32 flex flex-col items-center w-[320px] xl:w-[1060px] gap-20")}
+      {...props}
+    >
+      <div className="font-chakraPetch font-bold text-5xl xl:text-6xl text-[#FD480D] text-center">
+        What is CKCON?
       </div>
 
-      <div className="py-8">
-        <div className="relative">
-          <Image
-            className={clsx(
-              "max-md:hidden object-contain select-none",
-              "xl:h-[312px] xl:w-[1200px]",
-              "2xl:h-[500px] 2xl:w-[1920px]",
-              "3xl:h-[664px] 3xl:w-[2560px]",
-              "4xl:h-[1000px] 4xl:w-[3840px]"
-            )}
-            src={bgImg.src}
-            height={bgImg.height}
-            width={bgImg.width}
-            alt="background"
-            priority
-          />
-          <Image
-            className="md:hidden object-cover select-none h-[195px] w-[750px]"
-            src={bgMobileImg.src}
-            height={bgMobileImg.height}
-            width={bgMobileImg.width}
-            alt="background"
-            priority
-          />
+      <div className="flex flex-col xl:flex-row gap-[50px] items-center">
+        <div className="flex-1 flex flex-col gap-[26px]">
+          <div className="font-articulatCF font-bold italic text-lg xl:text-2xl text-[#FD480D]">
+            We are pleased to bring you CKCon—the Common Knowledge Conference.
+          </div>
 
-          <InfoDialog>
-            <div
-              className={
-                "top-[32%] left-[51%] cursor-pointer transition-all duration-500 w-6 h-6 absolute flex items-center justify-center"
-              }
-            >
-              <span
-                className={
-                  "animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
-                }
-                style={{ animationDuration: "2200ms" }}
-              />
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-white" />
+          <p className="text-sm xl:text-base">
+            CKCon is more than just a gathering; it&apos;s a movement that
+            champions innovation and explores uncharted territories in the
+            blockchain industry without compromising the cypherpunk ideals.
+          </p>
+
+          <p className="text-sm xl:text-base">
+            In our community, we have stood by these ideals, often going against
+            the status quo to chart our own path. While this journey was lonely
+            at times, today we see many projects converging on similar paths to
+            ours, and we are now on the cutting edge of the industry.
+          </p>
+
+          <p className="text-sm xl:text-base">
+            The same theses that once alienated us from others have been
+            validated. When others tried to scale on Layer 1, we embraced a
+            layered approach. While others moved to Proof of Stake and pursued
+            the account model, we stuck with Proof-of-Work and UTXOs. Instead of
+            the EVM, we built around a VM we believed in, one powered by RISC-V.
+          </p>
+        </div>
+
+        <Image
+          src={carImg.src}
+          height={carImg.height}
+          width={carImg.width}
+          alt="car"
+          priority
+        />
+      </div>
+
+      <div className="flex gap-[50px] items-center">
+        <div className="hidden flex-1 xl:flex flex-col items-center">
+          <div className="grid grid-cols-2 gap-[52px] mb-12">
+            {SPEAKERS.map(([name, profile]) => (
+              <Member key={name} name={name} profile={profile} isSimple />
+            ))}
+          </div>
+
+          <Link href="/2024/speakers">
+            <Button size="sm">See all Speakers</Button>
+          </Link>
+        </div>
+
+        <div className="flex-1">
+          <p className="text-sm xl:text-base mb-[40px]">
+            The same theses that once alienated us from others have been
+            validated. When others tried to scale on Layer 1, we embraced a
+            layered approach. While others moved to Proof of Stake and pursued
+            the account model, we stuck with Proof-of-Work and UTXOs. Instead of
+            the EVM, we built around a VM we believed in, one powered by RISC-V.
+          </p>
+
+          <div className="flex flex-col items-center">
+
+            <div className="speech-bubble pbottom aright text-white w-120 uppercase">
+              Please join us in Chiang Mai on November 9th, for the greatest
+              gathering of our community yet!
             </div>
-          </InfoDialog>
-        </div>
 
-        <Subscribe className="4xl:mt-20 3xl:mt-12 mt-8 w-full md:px-12 px-4" />
+            <Image
+              src={walkingApesImg.src}
+              height={walkingApesImg.height}
+              width={walkingApesImg.width}
+              alt="sayhi"
+              priority
+            />
+          </div>
+        </div>
       </div>
 
-      <div
-        className={clsx(
-          "w-[350px] md:w-[692px] xl:w-[1117px] 2xl:w-[1808px] 3xl:w-[2403px] 4xl:w-[3060px]",
-          "flex mt-auto 4xl:text-3xl 2xl:text-2xl md:text-base md:font-normal text-xs font-light font-articulatCF"
-        )}
-      >
-        <div className="mr-auto">
-          PRESENTED BY{" "}
-          <a
-            className="underline"
-            href="https://www.nervos.org/foundation"
-            target="_blank"
-          >
-            NERVOS FOUNDATION
-          </a>
-        </div>
-        <div className="min-w-[60px] flex items-center">© 2024</div>
-        <div className="ml-auto">
-          BUILT BY{" "}
-          <a
-            className="underline"
-            href="https://www.nervape.com/"
-            target="_blank"
-          >
-            NERVAPE STUDIO
-          </a>{" "}
-          &{" "}
-          <a
-            className="underline"
-            href="https://www.magickbase.com/"
-            target="_blank"
-          >
-            MAGICKBASE
-          </a>
-        </div>
+
+      <div className="flex flex-col gap-[52px] xl:hidden">
+        {SPEAKERS.map(([name, profile]) => (
+          <Member key={name} name={name} profile={profile} isSimple />
+        ))}
+
+        <Link href="/2024/speakers">
+          <Button size="sm">See all Speakers</Button>
+        </Link>
       </div>
+    </div>
+  );
+};
+
+export default function CKConPage() {
+  return (
+    <main className="w-full px-3 xl:px-[120px] flex flex-col gap-32 items-center">
+      <Hero className="pt-11" />
+      <CkConDescription />
+
+      <div className="flex flex-col items-center gap-16">
+        <div className="flex flex-col xl:flex-row gap-12 xl:gap-6">
+          <ApeCard className="flex-1" />
+          <ShibaCard className="flex-1" />
+          <WalkingApesCard className="flex-1" />
+        </div>
+        <Subscribe />
+      </div>
+
+      <Footer />
     </main>
   );
 }
