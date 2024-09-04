@@ -10,7 +10,7 @@ export default function PartnersPage() {
   return (
     <main className="flex flex-col gap-32 items-center">
       <Banner
-        title="Partners & Sponsors"
+        title="Partners"
         subtitle="CKCon would not be possible without the participation\nand growth of the ecosystem  supporting partners."
       />
 
