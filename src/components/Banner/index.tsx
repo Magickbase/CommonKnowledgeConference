@@ -15,8 +15,8 @@ export const Banner = ({ title, subtitle, className, ...props }: ComponentProps<
     <div className="mt-auto uppercase font-chakraPetch font-bold italic text-4xl max-w-[300px] md:max-w-[630px] md:text-5xl text-[#FD480D] text-center">
       {title}
     </div>
-    <div className="font-articulatCF font-semibold text-white text-xl max-w-[300px] md:max-w-[630px] text-center">
-      {subtitle}
+    <div className="font-articulatCF font-semibold text-white text-xl max-w-[300px] md:max-w-[660px] text-center">
+      {subtitle.split('\\n').map(str => <span key={str}>{str}<br /></span>)}
     </div>
-  </div>
+  </div >
 );

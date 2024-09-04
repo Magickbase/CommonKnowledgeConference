@@ -11,7 +11,7 @@ export default function PartnersPage() {
     <main className="flex flex-col gap-32 items-center">
       <Banner
         title="Partners & Sponsors"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        subtitle="CKCon would not be possible without the participation\nand growth of the ecosystem  supporting partners."
       />
 
       <div className="flex flex-col items-center gap-20 xl:grid grid-cols-4">
