@@ -38,7 +38,7 @@ const Navigation = () => {
         </div>
       </div>
 
-      <ul className="gap-8 ml-auto mr-8 hidden xl:flex">
+      <ul className="gap-16 ml-auto mr-36 hidden xl:flex">
         {menus.map((menu) => (
           <Link href={menu.link} key={menu.label}>
             <li className="font-semibold text-xl font-articulatCF">
