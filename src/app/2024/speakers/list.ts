@@ -6,11 +6,11 @@ export interface Profile {
 }
 
 const SPEAKER_LIST = new Map<string, Profile>([
-  ['Jan Xie', {
-    avatar: '/img/speakers/jan_xie.png',
-    title: 'Architect @ Nervos',
-    x: 'https://x.com/busyforking'
-  }],
+  // ['Jan Xie', {
+  //   avatar: '/img/speakers/jan_xie.png',
+  //   title: 'Architect @ Nervos',
+  //   x: 'https://x.com/busyforking'
+  // }],
   ['Cipher Wang', {
     avatar: '/img/speakers/cipher_wang.png',
     title: 'Founder @ CELL Studio',
@@ -21,11 +21,11 @@ const SPEAKER_LIST = new Map<string, Profile>([
     title: 'CEO @ Nervos Foundation',
     x: 'https://x.com/matt_bitcoin'
   }],
-  ['Kevin Wang', {
-    avatar: '/img/speakers/kevin_wang.png',
-    title: 'Co-Founder @ Khalani Network',
-    x: "https://x.com/knwang",
-  }],
+  // ['Kevin Wang', {
+  //   avatar: '/img/speakers/kevin_wang.png',
+  //   title: 'Co-Founder @ Khalani Network',
+  //   x: "https://x.com/knwang",
+  // }],
   [
     'Echo', {
       avatar: '/img/speakers/echo.jpg',
@@ -65,13 +65,36 @@ const SPEAKER_LIST = new Map<string, Profile>([
   ['Eric', {
     avatar: '/img/speakers/eric.jpg',
     title: 'Cellula',
-
   }],
   ['CHEN YU', {
     avatar: '/img/speakers/chen_yu.png',
     title: 'Founder @ MagiCKBase',
     x: 'https://x.com/CHEN_YU_bio'
-  }]
+  }],
+  ['Grace Gui', {
+    avatar: '/img/speakers/grace_gui.jpg',
+    title: 'Delta Labs & CKBEcoFund',
+    x: 'https://x.com/gracegui43',
+  }],
+  ['Lareina', {
+    avatar: '/img/speakers/lareina.jpg',
+    title: 'CMO @ UTXO Stack',
+    x: 'https://x.com/0x_lareina',
+  }],
+  ['Simon Shi', {
+    avatar: '/img/speakers/simon_shi.jpg',
+    title: 'APRO Oracle',
+    x: 'https://twitter.com/ShiehSimon',
+  }],
+  ['Leigh Blackwood Stringer', {
+    avatar: '/img/speakers/leigh_blackwood_stringer.png',
+    title: 'Community Lead @ Nervos Foundation'
+  }],
+  ['contrun', {
+    avatar: '/img/speakers/contrun.jpg',
+    title: 'Developer @ Cryptape',
+    x: 'https://x.com/@self_dual'
+  }],
 ])
 
 export default SPEAKER_LIST
