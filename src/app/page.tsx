@@ -11,6 +11,8 @@ import Logo from "./2024/logo.svg";
 import ckconBgImg from "./2024/ckcon-bg.png";
 import walkingApesImg from "./2024/walking-apes2.png";
 import carImg from "./2024/car.png";
+import topicApeImg from './2024/topics_ape.png';
+import pointsBorder from './2024/points_border.png';
 import SPEAKER_LIST from "./2024/speakers/list";
 import "./message.css";
 
@@ -56,7 +58,7 @@ const Hero = ({ className, ...props }: ComponentProps<"div">) => {
 const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
   return (
     <div
-      className={clsx(className, "pb-32 flex flex-col items-center w-[320px] xl:w-[1060px] gap-20")}
+      className={clsx(className, "pb-[70px] flex flex-col items-center w-[320px] xl:w-[1060px] gap-20")}
       {...props}
     >
       <div className="font-chakraPetch font-bold text-5xl xl:text-6xl text-[#FD480D] text-center">
@@ -138,6 +140,30 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
             />
           </div>
         </div>
+      </div>
+
+      <div className="hidden flex-col text-[#FD480D] font-bold xl:flex-row xl:flex xl:mt-[94px]">
+        <div className="flex-1 shrink-0 z-10 text-center xl:text-left" >
+          <div className="font-chakraPetch uppercase text-[55px] pb-3 mt-[10px] ml-5">Topics</div>
+          <Image
+            src={topicApeImg.src}
+            width="343"
+            height="287"
+            alt="Topics Ape"
+            priority
+          />
+        </div>
+
+        <div className="flex-1 shrink-0 w-[428px] flex flex-col gap-1.5 py-6 px-[53px] border-2 border-current rounded-[40px] text-[32px] -ml-4 z-0 box-border text-nowrap -tracking-[0.01em]">
+          <div className="font-semibold mb-0.5">A few talking points</div>
+          <Image src={pointsBorder.src} height="12" width="320" alt="points" />
+          <div>⚡️ <span className="italic">Lightning Network</span></div>
+          <div>🪪 <span className="italic">Payment Channels</span></div>
+          <div>🕺 <span className="italic">Social Networks</span></div>
+          <div>👯 <span className="italic">P2P Economy</span></div>
+          <div>💸 <span className="italic">UTXOs</span></div>
+        </div>
+
       </div>
 
 
