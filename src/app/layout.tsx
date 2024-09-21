@@ -7,6 +7,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.png',
+  },
   title: "Common Knowledge Conference",
 };
 
