@@ -12,6 +12,7 @@ import ckconBgImg from "./2024/ckcon-bg.png";
 import walkingApesImg from "./2024/walking-apes2.png";
 import carImg from "./2024/car.png";
 import topicApeImg from './2024/topics_ape.png';
+import topicApeMobileImg from './2024/topics_ape_mobile.png';
 import pointsBorder from './2024/points_border.png';
 import SPEAKER_LIST from "./2024/speakers/list";
 import "./message.css";
@@ -142,7 +143,7 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
         </div>
       </div>
 
-      <div className="hidden flex-col text-[#FD480D] font-bold xl:flex-row xl:flex xl:mt-[94px]">
+      <div className="flex flex-col items-center text-[#FD480D] font-bold xl:flex-row xl:mt-[94px] w-[90vw] xl:w-auto">
         <div className="flex-1 shrink-0 z-10 text-center xl:text-left" >
           <div className="font-chakraPetch uppercase text-[55px] pb-3 mt-[10px] ml-5">Topics</div>
           <Image
@@ -151,10 +152,19 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
             height="287"
             alt="Topics Ape"
             priority
+            className="hidden xl:block"
+          />
+          <Image
+            src={topicApeMobileImg.src}
+            width="323"
+            height="287"
+            alt="Topics Ape"
+            priority
+            className="xl:hidden"
           />
         </div>
 
-        <div className="flex-1 shrink-0 w-[428px] flex flex-col gap-1.5 py-6 px-[53px] border-2 border-current rounded-[40px] text-[32px] -ml-4 z-0 box-border text-nowrap -tracking-[0.01em]">
+        <div className="flex-1 shrink-0 md:w-[428px] flex flex-col gap-1.5 py-6 px-6 xl:px-[53px] border-2 border-current rounded-[40px] text-2xl md:text-[32px] xl:-ml-4 z-0 box-border text-nowrap -tracking-[0.01em]">
           <div className="font-semibold mb-0.5">A few talking points</div>
           <Image src={pointsBorder.src} height="12" width="320" alt="points" />
           <div>⚡️ <span className="italic">Lightning Network</span></div>
@@ -182,7 +192,7 @@ const CkConDescription = ({ className, ...props }: ComponentProps<"div">) => {
 
 export default function CKConPage() {
   return (
-    <main className="w-full px-3 xl:px-[120px] flex flex-col gap-32 items-center">
+    <main className="w-full px-3 xl:px-[120px] flex flex-col gap-32 items-center overflow-hidden">
       <Hero className="pt-11" />
       <CkConDescription />
 
