@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Profile } from "@/app/2024/speakers/list";
 import XIcon from "./x.svg";
 import LinktrIcon from './linktr.svg'
+import { GithubIcon, GlobeIcon } from "lucide-react";
 
 export const Member = ({ name, profile, isSimple = false
 }: {
@@ -44,6 +45,31 @@ export const Member = ({ name, profile, isSimple = false
               target="_blank"
             >
               <LinktrIcon width={20} height={20} />
+            </a>
+            : null
+        }
+
+        {
+          !isSimple && profile.github ?
+            <a
+              className="text-[#FD480D] border rounded-full border-[#FD480D] p-2 transition-all duration-200 hover:bg-[#FD480D] hover:text-white"
+              href={profile.github}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <GithubIcon width="20" height="20" />
+            </a>
+            : null
+        }
+        {
+          !isSimple && profile.website ?
+            <a
+              className="text-[#FD480D] border rounded-full border-[#FD480D] p-2 transition-all duration-200 hover:bg-[#FD480D] hover:text-white"
+              href={profile.website}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <GlobeIcon width="20" height="20" />
             </a>
             : null
         }

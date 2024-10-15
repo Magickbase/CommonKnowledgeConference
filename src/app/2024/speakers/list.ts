@@ -3,6 +3,8 @@ export interface Profile {
   title: string
   x?: string
   linktr?: string
+  website?: string
+  github?: string
 }
 
 const SPEAKER_LIST = new Map<string, Profile>([
@@ -94,6 +96,44 @@ const SPEAKER_LIST = new Map<string, Profile>([
     avatar: '/img/speakers/contrun.jpg',
     title: 'Developer @ Cryptape',
     x: 'https://x.com/@self_dual'
+  }],
+  ['Andrew Tu', {
+    avatar: '/img/speakers/andrew_tu.jpeg',
+    title: 'Efficient Frontier',
+    x: 'https://twitter.com/AndrewTu_'
+  }],
+  ['Arnau Via', {
+    avatar: '/img/speakers/arnau_via.jpg',
+    title: 'COO @ CKBULL',
+    x: 'http://x.com/ckbull_wallet'
+  }],
+  ['Ferran', {
+    avatar: '/img/speakers/ferran.jpeg',
+    title: 'CEO @ CKBULL',
+    x: 'http://x.com/ckbull_wallet'
+  }],
+  ['Flouse', {
+    avatar: '/img/speakers/flouse.png',
+    title: 'CTO @ CELL Studio'
+  }],
+  ['mohanson', {
+    avatar: '/img/speakers/mohanson.png',
+    title: 'Engineer @ Cryptape',
+    github: 'https://github.com/mohanson'
+  }],
+  ['Phroi', {
+    avatar: '/img/speakers/phroi.jpg',
+    title: 'iCKB'
+  }],
+  ['Seung Hyun Lee', {
+    avatar: '/img/speakers/seung_hyun_lee.jpg',
+    title: 'Coineazy Korea',
+    website: 'https://www.coineasy.xyz/'
+  }],
+  ['Yukang Chen', {
+    avatar: '/img/speakers/yukang_chen.png',
+    title: 'Software Engineer @ Cryptape',
+    x: 'https://x.com/cyukang'
   }],
 ])
 
