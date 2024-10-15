@@ -31,4 +31,36 @@ export default [
     title: 'Stable++',
     logo: '/img/partners/stablepp.svg'
   },
+  {
+    title: 'ShanHaiWoo',
+    logo: '/img/partners/shanhaiwoo.png',
+  },
+  {
+    title: 'CKB ECO FUND',
+    logo: '/img/partners/ecofund.png',
+  },
+  {
+    title: 'CKBull',
+    logo: '/img/partners/ckbull.png',
+  },
+  {
+    title: 'World3',
+    logo: '/img/partners/world3.svg'
+  },
+  {
+    title: 'iCKB',
+    logo: '/img/partners/ickb.svg',
+  },
+  {
+    title: 'Cell Studio',
+    logo: '/img/partners/cell_studio.svg',
+  },
+  {
+    title: 'UTXO Stack',
+    logo: '/img/partners/utxo_stack.png'
+  },
+  {
+    title: 'RGB++',
+    logo: '/img/partners/rgbpp.png'
+  }
 ]
