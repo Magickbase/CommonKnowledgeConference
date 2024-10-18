@@ -127,7 +127,7 @@ const SPEAKER_LIST = new Map<string, Profile>([
   }],
   ['Seung Hyun Lee', {
     avatar: '/img/speakers/seung_hyun_lee.jpg',
-    title: 'Coineazy Korea',
+    title: 'CoinEasy Korea',
     website: 'https://www.coineasy.xyz/'
   }],
   ['Yukang Chen', {
