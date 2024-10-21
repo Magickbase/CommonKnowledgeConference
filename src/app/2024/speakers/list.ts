@@ -135,6 +135,13 @@ const SPEAKER_LIST = new Map<string, Profile>([
     title: 'Software Engineer @ Cryptape',
     x: 'https://x.com/cyukang'
   }],
+  [
+    'Leona Hioki', {
+      avatar: '/img/speakers/leona_hioki.jpg',
+      title: 'Co-founder @ INTMAX',
+      x: 'https://x.com/leo_hio'
+    }
+  ]
 ])
 
 export default SPEAKER_LIST
