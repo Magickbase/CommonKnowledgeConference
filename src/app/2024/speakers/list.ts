@@ -141,7 +141,55 @@ const SPEAKER_LIST = new Map<string, Profile>([
       title: 'Co-founder @ INTMAX',
       x: 'https://x.com/leo_hio'
     }
-  ]
+  ],
+  [
+    'yunwen', {
+      avatar: '/img/speakers/yunwen.jpg',
+      title: 'Cryptape'
+    }
+  ],
+  [
+    'huyilin', {
+      avatar: '/img/speakers/huyilin.jpg',
+      title: '',
+      x: 'http://x.com/epr510'
+    }
+  ],
+  [
+    'Alvin', {
+      avatar: '/img/speakers/alvin.jpg',
+      title: 'CryptoWesearch',
+      x: 'https://x.com/alvin0617'
+    }
+  ],
+  [
+    'Ian Yang', {
+      avatar: '/img/speakers/ian_yang.jpg',
+      title: 'Cryptape',
+      x: 'https://x.com/doitian'
+    }
+  ],
+  [
+    'Lan Trong', {
+      avatar: '/img/speakers/lan_trong.png',
+      title: 'UTXO Global',
+      x: 'https://x.com/UTXOGlobal'
+    }
+  ],
+  [
+    'Daniel Hu', {
+      avatar: '/img/speakers/daniel_hu.jpg',
+      title: 'Co-founder @ Fi5box',
+      x: 'https://x.com/fi5box'
+    }
+  ],
+  [
+    'Ren Zhang', {
+      avatar: '/img/speakers/ren_zhang.jpg',
+      title: 'Cryptape',
+      x: 'https://twitter.com/nirenzang'
+    }
+  ],
 ])
 
 export default SPEAKER_LIST
