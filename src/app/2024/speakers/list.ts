@@ -173,7 +173,7 @@ const SPEAKER_LIST = new Map<string, Profile>([
     'Trong Dinh', {
       avatar: '/img/speakers/lan_trong.png',
       title: 'UTXO Global',
-      x: 'https://twitter.com/lanphamduy'
+      x: 'https://x.com/trongdth'
     }
   ],
   [
